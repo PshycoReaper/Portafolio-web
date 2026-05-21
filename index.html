@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexis Araiza | Portafolio Creativo</title>
+  <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+
+<body>
+  <div class="noise"></div>
+
+  <header class="hero" id="inicio">
+    <nav class="nav">
+      <a href="#inicio" class="brand">
+        <span class="brand-mark">AA</span>
+        <div>
+          <strong>Alexis Araiza</strong>
+          <small>Portafolio creativo</small>
+        </div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#identidad">Sobre mi</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#reel">Reel</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Portafolio web </p>
+        <h1>
+          Diseñador Digital de Medios Interactivos
+          </span>
+        </h1>
+        <p class="hero-text">
+          Este sitio hablaun poco sobre mi, mis proyectos universitarios y profesionales, y mis medios de contacto.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#proyectos" class="btn btn-solid">Ver proyectos</a>
+          <a href="#contacto" class="btn btn-ghost">Contactarme</a>
+        </div>
+
+    
+      </div>
+
+      <div class="hero-art reveal delay-1">
+        <div class="hero-card-main image-card">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+
+          <div class="hero-image-frame">
+            <img src="https://drive.google.com/thumbnail?id=1lzgtde5Ig-Ujv3RfuSAraMbqIBX6kG8a&sz=w1000"
+              alt="Ilustración de Alexis Araiza" />
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <<section class="section identity-section" id="identidad">
+  <div class="section-head reveal">
+    <p class="eyebrow">Sobre mí</p>
+    <h2>Desarrollador creativo enfocado en videojuegos, interfaces y experiencias digitales.</h2>
+  </div>
+
+  <div class="identity-layout">
+    <article class="identity-panel large reveal">
+      <span class="panel-kicker">Quién soy</span>
+      <h3>Hola, soy Alexis Araiza</h3>
+      <p>
+        Soy estudiante y desarrollador digital con interés en la creación de videojuegos,
+        diseño de interfaces y experiencias interactivas. Me gusta combinar la parte visual
+        con la programación para crear proyectos que no solo funcionen, sino que también
+        tengan personalidad y se sientan atractivos para el usuario.
+      </p>
+    </article>
+
+    <article class="identity-panel reveal delay-1">
+      <span class="panel-kicker">Lo que hago</span>
+      <h3>Mis habilidades</h3>
+      <p>
+        Trabajo con Unity, desarrollo WebGL, diseño de interfaces, programación en JavaScript,
+        conexión multijugador con Node.js y Socket.IO, además de la documentación y presentación
+        de proyectos académicos y profesionales.
+      </p>
+    </article>
+
+    <article class="identity-panel reveal delay-2">
+      <span class="panel-kicker">Mi enfoque</span>
+      <h3>Objetivo profesional</h3>
+      <p>
+        Mi objetivo es seguir creciendo en el desarrollo de videojuegos y experiencias digitales,
+        aprendiendo nuevas herramientas y mejorando mis proyectos para que puedan publicarse,
+        probarse y presentarse de forma profesional.
+      </p>
+    </article>
+  </div>
+</section>
+
+    <section class="section projects-section" id="proyectos">
+      <div class="section-head reveal">
+        <p class="eyebrow">Proyectos relevantes</p>
+        <h2>Trabajo universitario y profesional que muestra mi proceso y habilidades.</h2>
+      </div>
+
+      <div class="projects-wrap">
+        <article class="project-feature reveal">
+          <div class="project-visual pirate-visual">
+            <div class="project-label">Proyecto destacado</div>
+            <h3>Pirate Pop!</h3>
+            <p>Arcade mobile adaptado a navegador</p>
+          </div>
+
+          <div class="project-content">
+            <div class="project-meta">
+              <span>Unity</span>
+              <span>Mobile</span>
+              <span>WebGL</span>
+              <span>itch.io</span>
+            </div>
+
+            <p>
+              Pirate Pop! es un videojuego casual creado para móviles y preparado para exhibirse en web.
+              Este proyecto refleja trabajo en interfaz, adaptación de resolución, publicación y optimización.
+            </p>
+
+            <div class="project-actions">
+              <a href="#" class="btn btn-solid">Jugar en web</a>
+              <button class="btn btn-ghost"
+                onclick="openModal('Pirate Pop!', 'Aquí puedes colocar el enlace de itch.io, capturas del juego, controles, objetivo principal y los resultados obtenidos durante tus prácticas profesionales.')">Más
+                detalles</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="project-grid">
+          <article class="project-card reveal delay-1">
+            <div class="project-banner multi-visual"></div>
+            <div class="card-inner">
+              <p class="mini-label">En desarrollo</p>
+              <h3>Juego multijugador</h3>
+              <p>
+                Proyecto enfocado en salas, lobby, host, chat y sincronización entre jugadores usando servidor externo.
+              </p>
+              <div class="tags">
+                <span>Unity</span>
+                <span>Node.js</span>
+                <span>Socket.IO</span>
+              </div>
+              <button class="text-link"
+                onclick="openModal('Juego multijugador', 'Este proyecto puede incluir una explicación del sistema de rooms, ready button, flujo de conexión y pruebas realizadas durante el desarrollo.')">Ver
+                detalle</button>
+            </div>
+          </article>
+
+          <article class="project-card reveal delay-2">
+            <div class="project-banner web-visual"></div>
+            <div class="card-inner">
+              <p class="mini-label">Proyecto personal</p>
+              <h3>Portafolio Web</h3>
+              <p>
+                Sitio hecho desde cero para presentar identidad, reel, proyectos, contacto y una dirección visual más
+                auténtica.
+              </p>
+              <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <button class="text-link"
+                onclick="openModal('Portafolio Web', 'Este sitio fue diseñado para cumplir con los criterios de evaluación: identidad gráfica, proyectos relevantes, usabilidad, congruencia, redacción y diseño.')">Ver
+                detalle</button>
+            </div>
+          </article>
+
+          <article class="project-card reveal delay-3">
+            <div class="project-banner misc-visual"></div>
+            <div class="card-inner">
+              <p class="mini-label">Espacio editable</p>
+              <h3>Otro proyecto</h3>
+              <p>
+                Aquí puedes agregar otro proyecto universitario, profesional o una experiencia interactiva adicional.
+              </p>
+              <div class="tags">
+                <span>UI</span>
+                <span>Diseño</span>
+                <span>Prototipo</span>
+              </div>
+              <button class="text-link"
+                onclick="openModal('Otro proyecto', 'Usa esta tarjeta para agregar cualquier otro trabajo importante que quieras enseñar dentro de tu trayectoria.')">Ver
+                detalle</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reel-section" id="reel">
+      <div class="section-head reveal">
+        <p class="eyebrow">Web reel</p>
+        <h2>Un espacio para mostrar tu video, demo o compilación visual.</h2>
+      </div>
+
+      <div class="reel-layout reveal delay-1">
+        <div class="reel-screen">
+          <div class="reel-glow"></div>
+          <div class="play-button">▶</div>
+        </div>
+
+        <div class="reel-info">
+          <h3>Reel creativo</h3>
+          <p>
+            En esta sección puedes integrar un video de YouTube, Vimeo o una compilación de tus trabajos.
+            También puedes usarlo para mostrar avances de Pirate Pop!, pruebas del multijugador y otros procesos.
+          </p>
+          <a href="#" class="btn btn-solid">Ver reel</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="proceso">
+      <div class="section-head reveal">
+        <p class="eyebrow">Prácticas profesionales</p>
+        <h2>Proceso de trabajo y criterios cuidados en el portafolio.</h2>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-step reveal">
+          <span>01</span>
+          <h3>Planeación</h3>
+          <p>Definición del objetivo, enfoque visual, alcance del sitio y selección de proyectos relevantes.</p>
+        </article>
+
+        <article class="process-step reveal delay-1">
+          <span>02</span>
+          <h3>Diseño</h3>
+          <p>Construcción de una identidad gráfica propia con un lenguaje visual congruente y más personalizado.</p>
+        </article>
+
+        <article class="process-step reveal delay-2">
+          <span>03</span>
+          <h3>Desarrollo</h3>
+          <p>Maquetación desde cero con HTML, CSS y JavaScript, cuidando navegación, usabilidad y adaptación móvil.</p>
+        </article>
+
+        <article class="process-step reveal delay-3">
+          <span>04</span>
+          <h3>Presentación</h3>
+          <p>Organización clara de proyectos, datos de contacto, reel y evidencias de la trayectoria universitaria y
+            profesional.</p>
+        </article>
+      </div>
+
+      <div class="criteria-box reveal">
+        <h3>Criterios integrados</h3>
+        <div class="criteria-tags">
+          <span>Identidad gráfica</span>
+          <span>Proyectos relevantes</span>
+          <span>Prácticas profesionales</span>
+          <span>Contacto y redes</span>
+          <span>Usabilidad</span>
+          <span>Congruencia</span>
+          <span>Redacción</span>
+          <span>Diseño</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contacto">
+      <div class="section-head reveal">
+        <p class="eyebrow">Contacto y redes</p>
+        <h2>Información para conectar profesionalmente.</h2>
+      </div>
+
+      <div class="contact-layout">
+        <article class="contact-card reveal">
+          <h3>Alexis Araiza</h3>
+          <p class="contact-role">Diseñador digital · Desarrollador de videojuegos</p>
+          <ul class="contact-list">
+            <li><strong>Correo:</strong> tu-correo@example.com</li>
+            <li><strong>Ubicación:</strong> Ciudad Juárez, Chihuahua</li>
+            <li><strong>Disponibilidad:</strong> Prácticas, colaboración y proyectos</li>
+          </ul>
+        </article>
+
+        <article class="social-card reveal delay-1">
+          <h3>Redes</h3>
+          <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+            <a href="#">Itch.io</a>
+            <a href="#">Instagram</a>
+          </div>
+          <p class="social-note">Sustituye estos enlaces por tus perfiles reales antes de publicarlo.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 · Portafolio creativo desarrollado desde cero</p>
+  </footer>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="close-modal" onclick="closeModal()">×</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <script src="JS/script.js"></script>
+</body>
+
+</html>

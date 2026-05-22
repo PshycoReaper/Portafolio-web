@@ -532,7 +532,7 @@ ul {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -662,7 +662,7 @@ ul {
   gap: 18px;
 
   max-height: 0;
-  overflow: hidden;
+  overflow: auto;
   opacity: 0;
   transform: translateY(-12px);
   transition:
@@ -672,7 +672,7 @@ ul {
 }
 
 .extra-projects.active {
-  max-height: 1200px;
+  max-height: 100%;
   opacity: 1;
   transform: translateY(0);
 }
@@ -696,17 +696,7 @@ ul {
     linear-gradient(145deg, #0B0910, #24103B 60%, #A96CFF);
 }
 
-@media (max-width: 1050px) {
-  .extra-projects {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
-@media (max-width: 800px) {
-  .extra-projects {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* =========================================================
    13. REEL
@@ -1079,5 +1069,17 @@ ul {
   .hero-image-frame {
     width: 86%;
     height: 72%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .extra-projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .extra-projects {
+    grid-template-columns: 1fr;
   }
 }

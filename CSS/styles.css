@@ -479,6 +479,14 @@ ul {
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.04);
 }
 
+/* Botones para ver y descargar CV */
+.cv-download {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 
 /* =========================================================
    12. PROYECTOS
@@ -511,6 +519,37 @@ ul {
   justify-content: flex-end;
 }
 
+.project-image-bg,
+.project-card-image {
+  position: relative;
+  overflow: hidden;
+  background: #120D18;
+}
+
+.project-image-bg img,
+.project-card-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(9,7,14,.10), rgba(9,7,14,.75)),
+    linear-gradient(90deg, rgba(9,7,14,.35), rgba(125,57,255,.15));
+}
+
+.project-visual-content {
+  position: relative;
+  z-index: 2;
+}
+
 .project-visual h3 {
   font-size: 2.4rem;
   line-height: 1;
@@ -519,13 +558,6 @@ ul {
 .project-visual p {
   color: #ECE7F9;
   margin-top: 8px;
-}
-
-.pirate-visual {
-  background:
-    radial-gradient(circle at 70% 22%, rgba(255,255,255,.24), transparent 0 16%),
-    linear-gradient(160deg, rgba(10,10,16,.2), rgba(10,10,16,.65)),
-    linear-gradient(135deg, #5520B4, #1A0E26 55%, #8D5FFF);
 }
 
 .project-content {
@@ -595,24 +627,6 @@ ul {
   position: relative;
 }
 
-.multi-visual {
-  background:
-    radial-gradient(circle at 75% 25%, rgba(169,108,255,.38), transparent 0 17%),
-    linear-gradient(135deg, #0B0910, #251138, #5B22CC);
-}
-
-.web-visual {
-  background:
-    linear-gradient(0deg, rgba(255,255,255,.06), rgba(255,255,255,.06)),
-    linear-gradient(135deg, #1D102B, #0F0A16 62%, #7D39FF);
-}
-
-.misc-visual {
-  background:
-    radial-gradient(circle at 20% 70%, rgba(125,57,255,.28), transparent 0 16%),
-    linear-gradient(145deg, #160E21, #0B0910 55%, #411986);
-}
-
 .card-inner {
   padding: 24px 22px 26px;
 }
@@ -631,7 +645,68 @@ ul {
   cursor: pointer;
   padding: 0;
 }
+/* =========================================================
+   PROYECTOS EXTRA DESPLEGABLES
+   ========================================================= */
 
+.more-projects-control {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+}
+
+.extra-projects {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-12px);
+  transition:
+    max-height .6s ease,
+    opacity .35s ease,
+    transform .35s ease;
+}
+
+.extra-projects.active {
+  max-height: 1200px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fondos nuevos para tarjetas extra */
+.art-visual {
+  background:
+    radial-gradient(circle at 70% 25%, rgba(169,108,255,.40), transparent 0 18%),
+    linear-gradient(135deg, #120A1C, #35125F, #7D39FF);
+}
+
+.vr-visual {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(125,57,255,.35), transparent 0 18%),
+    linear-gradient(135deg, #09070E, #1A1228 55%, #4B1AA2);
+}
+
+.animation-visual {
+  background:
+    radial-gradient(circle at 75% 65%, rgba(220,203,255,.20), transparent 0 20%),
+    linear-gradient(145deg, #0B0910, #24103B 60%, #A96CFF);
+}
+
+@media (max-width: 1050px) {
+  .extra-projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .extra-projects {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* =========================================================
    13. REEL

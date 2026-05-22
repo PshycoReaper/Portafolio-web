@@ -40,3 +40,18 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 revealItems.forEach(item => observer.observe(item));
+
+const toggleProjectsBtn = document.getElementById("toggleProjectsBtn");
+const extraProjects = document.getElementById("extraProjects");
+
+if (toggleProjectsBtn && extraProjects) {
+  toggleProjectsBtn.addEventListener("click", () => {
+    extraProjects.classList.toggle("active");
+
+    if (extraProjects.classList.contains("active")) {
+      toggleProjectsBtn.textContent = "Ocultar proyectos";
+    } else {
+      toggleProjectsBtn.textContent = "Ver más proyectos";
+    }
+  });
+}
